@@ -9,7 +9,7 @@ for cont in range (10):
     lista.append(num)
 
 #ordenar la lista
-lista.sort
+lista.sort()
 
 #mostrar lista ordenada
 print(lista)
