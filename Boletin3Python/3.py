@@ -1,3 +1,4 @@
+import math
 class Punto:
     def __init__(self, x, y):
         self.__x = x
@@ -17,5 +18,8 @@ class Punto:
     def distancia(self, other):
         result = 0
         if isinstance(other, Punto):
-            result = math.sqrt(x)
+            result =  math.sqrt((self.__x - other.__x)**2 + (self.__y - other.__y)**2)
+        else:
+            result = None
+        return result
             
