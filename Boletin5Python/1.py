@@ -21,9 +21,9 @@ class Persona:
         return f"{self.__nombre}, {self.__edad}, {self.__altura}"
 
 #Devuelve una lista de personas con los atributos leidos en el txt
-def readPersonas():
+def readPersonas(ruta):
     listaPersonas = []
-    with open("alumnos.txt", "r") as f:
+    with open(ruta, "r") as f:
        for linea in f:
            nombre, edad, altura = linea.strip().split(",")
            edad = int(edad)
@@ -62,7 +62,7 @@ if __name__ == "__main__":
             f.write(person.__str__() + "\n")
 
     #recoleccion de datos del fichero
-    personas = readPersonas()
+    personas = readPersonas(ruta_archivo)
 
     #obtencion de la media de edades y alturas a partir de la lista de personas
     medias = calculaMedia(personas)
